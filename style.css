@@ -1,52 +1,100 @@
 * {
-  padding: 30px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.goodbye-card {
-  max-width: 700px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  padding: 50px;
-  border-radius: 20px;
-  text-align: center;
+body {
+  background: #111;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
 }
 
-.goodbye-card h1 {
+/* INTRO */
+.intro {
+  font-size: 1.4rem;
   margin-bottom: 25px;
+  text-align: center;
+  transition: 1s;
 }
 
-.goodbye-card p {
+/* BUTTON */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  background: #f4ede4;
+  color: #222;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* BOOK */
+.book {
+  display: none;
+  width: 90%;
+  max-width: 850px;
+  height: 85vh;
+
+  background: #fdf6e3;
+
+  border-radius: 14px;
+
+  overflow-y: auto;
+
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+
+  animation: fadeIn 1s ease;
+}
+
+/* PAGE */
+.page {
+  padding: 60px;
+
+  color: #333;
+
+  white-space: pre-wrap;
+
   line-height: 2;
-  margin-bottom: 30px;
-  color: rgba(255,255,255,0.85);
-  white-space: pre-line;
+
+  font-size: 1.05rem;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .split-container {
-    flex-direction: column;
-  }
+/* ENDING PAGE */
+.last-page {
+  display: none;
 
-  .split {
-    width: 100%;
-    min-height: 50vh;
-  }
+  padding: 60px;
 
-  .page {
-    padding: 30px 22px;
-    font-size: 0.95rem;
-    line-height: 1.9;
-  }
+  text-align: center;
 
-  .book {
-    width: 95%;
-    height: 90vh;
-  }
+  color: #333;
+}
 
-  .goodbye-card {
-    padding: 30px 22px;
-  }
+.ending-text {
+  font-size: 1.2rem;
+
+  margin-bottom: 30px;
+}
+
+/* FLOWER */
+.flower {
+  width: 180px;
+
+  opacity: 0;
+
+  animation: flowerFade 3s ease forwards;
 }
 
 /* SCROLLBAR */
@@ -56,9 +104,11 @@
 
 .book::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.3);
+
   border-radius: 10px;
 }
 
+/* ANIMATION */
 @keyframes flowerFade {
   from {
     opacity: 0;

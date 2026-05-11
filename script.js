@@ -43,52 +43,42 @@ Thank you for reading this long letter na khun suayy 🤍`
 ;
 
 function showBook() {
-  document.getElementById("splitContainer").style.display = "none";
 
-  document.getElementById("book").style.display = "block";
+  // hide intro
+  document.getElementById("introText").style.opacity = 0;
 
+  document.querySelector(".btn").style.display = "none";
+
+  // play music
   document.getElementById("bgMusic").play();
 
-  const typedText = document.getElementById("typedText");
+  setTimeout(() => {
 
-  typedText.innerHTML = "";
+    document.getElementById("book").style.display = "block";
 
-  let i = 0;
+    const typedText = document.getElementById("typedText");
 
-  function typing() {
-    if (i < message.length) {
-      typedText.innerHTML += message.charAt(i);
+    let i = 0;
 
-      i++;
+    function typing() {
 
-      // AUTO SCROLL FOR PHONE
-      const book = document.getElementById("book");
-      book.scrollTop = book.scrollHeight;
+      if (i < message.length) {
 
-      setTimeout(typing, 35);
-    } else {
-      document.getElementById("lastPage").style.display = "block";
+        typedText.innerHTML += message.charAt(i);
 
-      const book = document.getElementById("book");
-      book.scrollTop = book.scrollHeight;
+        i++;
+
+        // typing speed
+        setTimeout(typing, 35);
+
+      } else {
+
+        // show ending
+        document.getElementById("lastPage").style.display = "block";
+      }
     }
-  }
 
-  typing();
-}
+    typing();
 
-function openGoodbye() {
-  document.getElementById("splitContainer").style.display = "none";
-
-  document.getElementById("goodbyePage").style.display = "flex";
-
-  document.getElementById("bgMusic").play();
-}
-
-function goBack() {
-  document.getElementById("goodbyePage").style.display = "none";
-
-  document.getElementById("book").style.display = "none";
-
-  document.getElementById("splitContainer").style.display = "flex";
+  }, 700);
 }

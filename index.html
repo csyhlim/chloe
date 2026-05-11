@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+        <button class="main-btn" onclick="showBook()">
+          Open Confession
+        </button>
+      </div>
+
+      <div class="split right">
+        <h1>Goodbye Letter</h1>
+        <p>
+          if one day things don’t go the way i hope, i still want you to know
+          that meeting you was something precious for me.
+        </p>
+
+        <button class="main-btn" onclick="openGoodbye()">
+          Open Goodbye
+        </button>
+      </div>
+    </div>
+
+    <!-- CONFESSION BOOK -->
+    <div class="book" id="book">
+      <div class="page">
+        <p id="typedText"></p>
+      </div>
+
+      <div class="last-page" id="lastPage">
+        <p class="ending-text">
+          Here i’ve made a playlist for you kha khun suay ♡
+        </p>
+
+        <img src="ttd.jpeg" class="flower" />
+      </div>
+    </div>
+
+    <!-- GOODBYE PAGE -->
+    <div class="goodbye-page" id="goodbyePage">
+      <div class="goodbye-card">
+        <h1>goodbye letter</h1>
+
+        <p>
+          maybe we met at the wrong time, or maybe the universe just wanted
+          me to know someone as beautiful as you even if only for a while.
+          
+          thank you for every conversation, every small attention, every moment
+          that made me smile more than usual.
+          
+          if one day we slowly become strangers again, i hope life treats you
+          gently. i hope someone loves you the way you deserve.
+          
+          and if that person can’t be me, then i’ll still quietly wish you
+          happiness from afar.
+        </p>
+
+        <button class="back-btn" onclick="goBack()">
+          Back Home
+        </button>
+      </div>
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

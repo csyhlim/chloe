@@ -1,0 +1,82 @@
+* {
+  padding: 30px;
+}
+
+.goodbye-card {
+  max-width: 700px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.goodbye-card h1 {
+  margin-bottom: 25px;
+}
+
+.goodbye-card p {
+  line-height: 2;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.85);
+  white-space: pre-line;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .split {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .page {
+    padding: 30px 22px;
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .book {
+    width: 95%;
+    height: 90vh;
+  }
+
+  .goodbye-card {
+    padding: 30px 22px;
+  }
+}
+
+/* SCROLLBAR */
+.book::-webkit-scrollbar {
+  width: 6px;
+}
+
+.book::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+@keyframes flowerFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
